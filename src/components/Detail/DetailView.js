@@ -37,6 +37,9 @@ function DetailView(){
     const product = useSelector(state => state.detail);
     // console.log(product);
     const {id} = useParams();
+    useEffect(()=>{
+        document.title = "FlipKart | Detail";
+    }, [])
 
     useEffect(()=>{
         dispatch(getProductDetail(id));

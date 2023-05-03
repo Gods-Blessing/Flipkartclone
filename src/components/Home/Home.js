@@ -24,6 +24,9 @@ function Home(){
     const products = useSelector(state => state.product);
 // console.log(products);
 
+    useEffect(()=>{
+        document.title = "FlipKart";
+    }, [])
 
     useEffect(()=>{
         dispatch(fetchProducts());

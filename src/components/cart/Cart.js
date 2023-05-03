@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import {useSelector} from "react-redux";
 import {Box, Grid, Typography, styled, Button} from "@mui/material";
 
@@ -52,6 +54,9 @@ const LeftComponent = styled(Grid)(({theme})=>({
 function Cart(){
     const cartItems = useSelector(state=>state.cart)
     // console.log(cartItems);
+    useEffect(()=>{
+        document.title = "FlipKart | Cart";
+    }, [])
 
     return(
         <>
